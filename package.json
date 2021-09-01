@@ -1,0 +1,20 @@
+{
+	"dependencies": {
+		"@tonclient/core": "^1",
+		"@tonclient/lib-node": "^1",
+		"child_process": "^1.0.2",
+		"directory-tree": "^2.3.1",
+		"ton-testing-suite": "^1.2.3"
+	},
+	"scripts": {
+		"access-controll": "node ./scripts/access-controll",
+		"timer": "node ./scripts/timer",
+		"build": "cd scripts && node compile && cd ..",
+		"timer-handle": "node ./scripts/timers-handler",
+		"wallet": "node ./scripts/wallet",
+		"terms": "node ./scripts/terms",
+		"debot": "node ./scripts/debot",
+		"rtw": "node ./scripts/rtw",
+		"ttw": "node ./scripts/ttw"
+	}
+}

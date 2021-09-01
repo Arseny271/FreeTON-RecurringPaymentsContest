@@ -1,0 +1,51 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "walletSendValue",
+			"inputs": [
+				{"name":"dest","type":"address"},
+				{"name":"amount","type":"uint128"},
+				{"name":"bounce","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTimerAddress",
+			"inputs": [
+				{"name":"_answer_id","type":"uint32"},
+				{"name":"owner_public_key_","type":"uint256"},
+				{"name":"owner_address_","type":"address"},
+				{"name":"random_value_","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"timer_address","type":"address"}
+			]
+		},
+		{
+			"name": "deployTimer",
+			"inputs": [
+				{"name":"owner_public_key_","type":"uint256"},
+				{"name":"owner_address_","type":"address"},
+				{"name":"random_value_","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"timer_address","type":"address"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"timer_code","type":"cell"}
+	],
+	"events": [
+	]
+}

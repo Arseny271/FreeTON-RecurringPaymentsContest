@@ -1,0 +1,89 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setTimerParams",
+			"inputs": [
+				{"name":"new_notify_address","type":"address"},
+				{"name":"new_reward","type":"uint128"},
+				{"name":"new_period","type":"uint64"},
+				{"name":"new_start","type":"uint64"},
+				{"name":"need_repeat","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "sendValue",
+			"inputs": [
+				{"name":"dest","type":"address"},
+				{"name":"amount","type":"uint128"},
+				{"name":"bounce","type":"bool"},
+				{"name":"flag","type":"uint16"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "startTimer",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "timerWakeUp",
+			"inputs": [
+				{"name":"reward_address","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_owner_public_key","type":"uint256"},
+				{"name":"_owner_address","type":"address"},
+				{"name":"_random_value","type":"uint256"},
+				{"name":"_wake_up_time","type":"uint64"},
+				{"name":"_reward","type":"uint128"},
+				{"name":"_next_reward","type":"uint128"},
+				{"name":"_notify_address","type":"address"},
+				{"name":"_repeat_request","type":"bool"},
+				{"name":"_period","type":"uint64"},
+				{"name":"_start","type":"uint64"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"owner_public_key","type":"uint256"},
+		{"key":2,"name":"owner_address","type":"address"},
+		{"key":3,"name":"random_value","type":"uint256"}
+	],
+	"events": [
+		{
+			"name": "WakeUpRequest",
+			"inputs": [
+				{"name":"timer_address","type":"address"},
+				{"name":"owner_address","type":"address"},
+				{"name":"owner_pubkey","type":"uint256"},
+				{"name":"random","type":"uint256"},
+				{"name":"wakeup_time","type":"uint64"},
+				{"name":"reward","type":"uint128"},
+				{"name":"is_restart","type":"bool"}
+			],
+			"outputs": [
+			]
+		}
+	]
+}

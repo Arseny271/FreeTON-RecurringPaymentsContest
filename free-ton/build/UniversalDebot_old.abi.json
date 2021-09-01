@@ -1,0 +1,502 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "updateTonTokenWalletsInfo",
+			"inputs": [
+				{"name":"afterUpdateId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetTonTokenWalletsMapping",
+			"inputs": [
+				{"components":[{"name":"ton_token_wallet","type":"address"},{"name":"need_receive_callback","type":"bool"},{"name":"allow_non_notifiable","type":"bool"},{"name":"need_bounce_callback","type":"bool"},{"name":"trust","type":"bool"}],"name":"wallets","type":"map(address,tuple)"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetTonTokenWalletsDetails",
+			"inputs": [
+				{"components":[{"name":"name","type":"bytes"},{"name":"symbol","type":"bytes"},{"name":"decimals","type":"uint8"},{"name":"root_public_key","type":"uint256"},{"name":"root_owner_address","type":"address"},{"name":"total_supply","type":"uint128"}],"name":"details","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetTonTokenWalletsError",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetTonTokenWalletsAll",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "updateActiveSubscriptionsInfo",
+			"inputs": [
+				{"name":"afterUpdateId","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetActiveSubscriptionsMapping",
+			"inputs": [
+				{"components":[{"components":[{"name":"send_value_to","type":"address"},{"name":"root_token_wallet","type":"address"},{"name":"value","type":"uint128"},{"name":"gas_value","type":"uint128"},{"name":"period","type":"uint64"},{"name":"start","type":"uint64"},{"name":"info","type":"bytes"}],"name":"terms","type":"tuple"},{"name":"time_of_next_payment","type":"uint64"}],"name":"spenders","type":"map(address,tuple)"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetActiveSubscriptionTime",
+			"inputs": [
+				{"name":"time","type":"uint64"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetActiveSubscriptionError",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetActiveSubscriptionsAll",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "startDeBot",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetDefaultPubkey",
+			"inputs": [
+				{"name":"value","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getUserWallet",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetUserWallet",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetUserWalletType",
+			"inputs": [
+				{"name":"acc_type","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "updateWalletInfo",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "updateTonTokenWallets",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "showMainMenu",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "startSendTokens",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onRootTokenWalletSelect",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onTonTokenInputAddressForSend",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onTonTokenWalletGetBalance",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTonTokenWalletGas",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "startSendingTokens",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onConfirmNewWallerCreation",
+			"inputs": [
+				{"name":"value","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createTonTokenWallet",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onInputRootTokenAddress",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetTip3TokenRootDetailsForCreation",
+			"inputs": [
+				{"components":[{"name":"name","type":"bytes"},{"name":"symbol","type":"bytes"},{"name":"decimals","type":"uint8"},{"name":"root_public_key","type":"uint256"},{"name":"root_owner_address","type":"address"},{"name":"total_supply","type":"uint128"}],"name":"details","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onRootTokenWalletInfoPrint",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onDeployTonTokenWallet",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "sendTonCrystal",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onInputAddressForSend",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "startSendingTons",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "showActiveSubscriptions",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onSubscriptionSelect",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onPrintSpendTerms",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "resumeSubscribtion",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "unsubscribeQuestion",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onUnsubscribeByUser",
+			"inputs": [
+				{"name":"value","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "newSubscription",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetAddressOfNewSubscription",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetAddressSubscriptionTermsType",
+			"inputs": [
+				{"name":"acc_type","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetAddressSubscriptionTermsCodeHash",
+			"inputs": [
+				{"name":"code_hash","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetSubscriptionTerms",
+			"inputs": [
+				{"components":[{"name":"debot_address","type":"address"},{"name":"shipper_pubkey","type":"uint256"},{"name":"verifier_pubkey","type":"uint256"},{"name":"send_value_to","type":"address"},{"name":"root_token_wallet","type":"address"},{"name":"value","type":"uint128"},{"name":"gas_value","type":"uint128"},{"name":"period","type":"uint64"},{"name":"max_payment_delay","type":"uint32"},{"name":"name","type":"bytes"},{"name":"info","type":"bytes"}],"name":"terms","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetSubscriptionMediatorCode",
+			"inputs": [
+				{"name":"contract_code","type":"cell"},
+				{"name":"code_hash","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onPrintTerms",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onTermsConfirmByUser",
+			"inputs": [
+				{"name":"value","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deployTokenWalletForBroker",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onDeployTokenWalletForBroker",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetTonTokenWalletBroker",
+			"inputs": [
+				{"name":"ton_token_wallet","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onMediatorAddressPrint",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onMediatorDeploy",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "requestPermissionBroker",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onSuccess",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onError",
+			"inputs": [
+				{"name":"sdkError","type":"uint32"},
+				{"name":"exitCode","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "start",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotInfo",
+			"id": "0xDEB",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"version","type":"bytes"},
+				{"name":"publisher","type":"bytes"},
+				{"name":"key","type":"bytes"},
+				{"name":"author","type":"bytes"},
+				{"name":"support","type":"address"},
+				{"name":"hello","type":"bytes"},
+				{"name":"language","type":"bytes"},
+				{"name":"dabi","type":"bytes"},
+				{"name":"icon","type":"bytes"}
+			]
+		},
+		{
+			"name": "getRequiredInterfaces",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"interfaces","type":"uint256[]"}
+			]
+		},
+		{
+			"name": "setIcon",
+			"inputs": [
+				{"name":"icon","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "attachABI",
+			"inputs": [
+				{"name":"dabi","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotOptions",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"options","type":"uint8"},
+				{"name":"debotAbi","type":"bytes"},
+				{"name":"targetAbi","type":"bytes"},
+				{"name":"targetAddr","type":"address"}
+			]
+		},
+		{
+			"name": "setABI",
+			"inputs": [
+				{"name":"dabi","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}

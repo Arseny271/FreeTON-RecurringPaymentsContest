@@ -1,0 +1,58 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"components":[{"name":"debot_address","type":"address"},{"name":"shipper_pubkey","type":"uint256"},{"name":"verifier_pubkey","type":"uint256"},{"name":"send_value_to","type":"address"},{"name":"root_token_wallet","type":"address"},{"name":"value","type":"uint128"},{"name":"gas_value","type":"uint128"},{"name":"period","type":"uint64"},{"name":"max_payment_delay","type":"uint32"},{"name":"name","type":"bytes"},{"name":"info","type":"bytes"}],"name":"subscription_terms","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "sendValue",
+			"inputs": [
+				{"name":"dest","type":"address"},
+				{"name":"amount","type":"uint128"},
+				{"name":"bounce","type":"bool"},
+				{"name":"flag","type":"uint16"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deployMediatorContract",
+			"inputs": [
+				{"name":"user_pubkey","type":"uint256"},
+				{"components":[{"name":"wallet_for_spend","type":"address"},{"name":"tokens_source","type":"address"}],"name":"user_info","type":"tuple"}
+			],
+			"outputs": [
+				{"name":"mediator_address","type":"address"}
+			]
+		},
+		{
+			"name": "getTerms",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"debot_address","type":"address"},{"name":"shipper_pubkey","type":"uint256"},{"name":"verifier_pubkey","type":"uint256"},{"name":"send_value_to","type":"address"},{"name":"root_token_wallet","type":"address"},{"name":"value","type":"uint128"},{"name":"gas_value","type":"uint128"},{"name":"period","type":"uint64"},{"name":"max_payment_delay","type":"uint32"},{"name":"name","type":"bytes"},{"name":"info","type":"bytes"}],"name":"terms","type":"tuple"}
+			]
+		},
+		{
+			"name": "getMediatorContractCode",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"contract_code","type":"cell"},
+				{"name":"code_hash","type":"uint256"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"random_value","type":"uint256"},
+		{"key":2,"name":"mediator_contract_code","type":"cell"}
+	],
+	"events": [
+	]
+}

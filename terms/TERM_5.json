@@ -1,0 +1,13 @@
+{
+	"debot_address": "0:0000000000000000000000000000000000000000000000000000000000000000",
+	"shipper_pubkey": "",
+	"verifier_pubkey": "0",
+	"send_value_to": "0:d94edfa7023629a8aaad684fa08484138a887113274ed3fcef93e531131fdade",
+	"root_token_wallet": "0:0000000000000000000000000000000000000000000000000000000000000000",
+	"value": "500_000_000",
+	"gas_value": "350_000_000",
+	"period": "300", 
+	"max_payment_delay": "60",
+	"name": "Subscription 5",
+	"info": "TEST"
+}

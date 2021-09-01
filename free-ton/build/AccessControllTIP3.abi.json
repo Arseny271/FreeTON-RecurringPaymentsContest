@@ -1,0 +1,119 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"components":[{"name":"debot_address","type":"address"},{"name":"shipper_pubkey","type":"uint256"},{"name":"verifier_pubkey","type":"uint256"},{"name":"send_value_to","type":"address"},{"name":"root_token_wallet","type":"address"},{"name":"value","type":"uint128"},{"name":"gas_value","type":"uint128"},{"name":"period","type":"uint64"},{"name":"max_payment_delay","type":"uint32"},{"name":"name","type":"bytes"},{"name":"info","type":"bytes"}],"name":"terms","type":"tuple"},
+				{"components":[{"name":"wallet_for_spend","type":"address"},{"name":"tokens_source","type":"address"}],"name":"user_info","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetTimerContractAddress",
+			"inputs": [
+				{"name":"timer_address","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "notifyTimerDeployed",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onWakeUpCallback",
+			"inputs": [
+				{"name":"was_restarted","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "tokensReceivedCallback",
+			"inputs": [
+				{"name":"token_wallet","type":"address"},
+				{"name":"token_root","type":"address"},
+				{"name":"amount","type":"uint128"},
+				{"name":"sender_public_key","type":"uint256"},
+				{"name":"sender_address","type":"address"},
+				{"name":"sender_wallet","type":"address"},
+				{"name":"original_gas_to","type":"address"},
+				{"name":"updated_balance","type":"uint128"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "notifyApprove",
+			"inputs": [
+				{"components":[{"name":"send_value_to","type":"address"},{"name":"root_token_wallet","type":"address"},{"name":"value","type":"uint128"},{"name":"gas_value","type":"uint128"},{"name":"period","type":"uint64"},{"name":"start","type":"uint64"},{"name":"info","type":"bytes"}],"name":"terms","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "notifyDisapprove",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"terms_address_","type":"address"},
+				{"components":[{"name":"debot_address","type":"address"},{"name":"shipper_pubkey","type":"uint256"},{"name":"verifier_pubkey","type":"uint256"},{"name":"send_value_to","type":"address"},{"name":"root_token_wallet","type":"address"},{"name":"value","type":"uint128"},{"name":"gas_value","type":"uint128"},{"name":"period","type":"uint64"},{"name":"max_payment_delay","type":"uint32"},{"name":"name","type":"bytes"},{"name":"info","type":"bytes"}],"name":"subscription_terms","type":"tuple"},
+				{"components":[{"name":"wallet_for_spend","type":"address"},{"name":"tokens_source","type":"address"}],"name":"user_information","type":"tuple"},
+				{"name":"timer_address","type":"address"},
+				{"name":"timer_was_deployed_","type":"bool"},
+				{"name":"available_until","type":"uint64"}
+			]
+		},
+		{
+			"name": "getAvailableUntil",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint64"}
+			]
+		},
+		{
+			"name": "onGetTonTokenWalletAddress",
+			"inputs": [
+				{"name":"ton_token_wallet","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetTonTokenWalletDetails",
+			"inputs": [
+				{"components":[{"name":"root_address","type":"address"},{"name":"wallet_public_key","type":"uint256"},{"name":"owner_address","type":"address"},{"name":"balance","type":"uint128"},{"name":"receive_callback","type":"address"},{"name":"bounced_callback","type":"address"},{"name":"allow_non_notifiable","type":"bool"}],"name":"details","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTonTokenWallet",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"ton_token_wallet","type":"address"},{"name":"need_receive_callback","type":"bool"},{"name":"allow_non_notifiable","type":"bool"},{"name":"need_bounce_callback","type":"bool"},{"name":"trust","type":"bool"}],"name":"ton_token_wallet_info_","type":"tuple"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"terms_address","type":"address"}
+	],
+	"events": [
+	]
+}

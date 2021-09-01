@@ -1,0 +1,175 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "approve",
+			"inputs": [
+				{"name":"spender","type":"address"},
+				{"components":[{"name":"send_value_to","type":"address"},{"name":"root_token_wallet","type":"address"},{"name":"value","type":"uint128"},{"name":"gas_value","type":"uint128"},{"name":"period","type":"uint64"},{"name":"start","type":"uint64"},{"name":"info","type":"bytes"}],"name":"terms","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "disapprove",
+			"inputs": [
+				{"name":"spender","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "spend",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "walletSendValue",
+			"inputs": [
+				{"name":"dest","type":"address"},
+				{"name":"amount","type":"uint128"},
+				{"name":"bounce","type":"bool"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "walletSendTokens",
+			"inputs": [
+				{"name":"root_token_wallet","type":"address"},
+				{"name":"gas_value","type":"uint128"},
+				{"name":"bounce","type":"bool"},
+				{"name":"flag","type":"uint16"},
+				{"name":"to","type":"address"},
+				{"name":"tokens","type":"uint128"},
+				{"name":"grams","type":"uint128"},
+				{"name":"send_gas_to","type":"address"},
+				{"name":"notify_receiver","type":"bool"},
+				{"name":"payload","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "walletDeployTonTokenWallet",
+			"inputs": [
+				{"name":"root_token_wallet","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "walletAddTonTokenWallet",
+			"inputs": [
+				{"name":"root_token_wallet","type":"address"},
+				{"name":"need_receive_callback","type":"bool"},
+				{"name":"allow_non_notifiable","type":"bool"},
+				{"name":"need_bounce_callback","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getActiveSpenders",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"components":[{"name":"send_value_to","type":"address"},{"name":"root_token_wallet","type":"address"},{"name":"value","type":"uint128"},{"name":"gas_value","type":"uint128"},{"name":"period","type":"uint64"},{"name":"start","type":"uint64"},{"name":"info","type":"bytes"}],"name":"terms","type":"tuple"},{"name":"time_of_next_payment","type":"uint64"}],"name":"value0","type":"map(address,tuple)"}
+			]
+		},
+		{
+			"name": "onGetTonTokenWalletAddress",
+			"inputs": [
+				{"name":"ton_token_wallet","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onGetTonTokenWalletDetails",
+			"inputs": [
+				{"components":[{"name":"root_address","type":"address"},{"name":"wallet_public_key","type":"uint256"},{"name":"owner_address","type":"address"},{"name":"balance","type":"uint128"},{"name":"receive_callback","type":"address"},{"name":"bounced_callback","type":"address"},{"name":"allow_non_notifiable","type":"bool"}],"name":"details","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "safeGetTonTokenWallet",
+			"inputs": [
+				{"name":"root_token_wallet","type":"address"}
+			],
+			"outputs": [
+				{"name":"ton_token_wallet","type":"address"},
+				{"name":"trust","type":"bool"}
+			]
+		},
+		{
+			"name": "getTonTokenWallet",
+			"inputs": [
+				{"name":"root_token_wallet","type":"address"}
+			],
+			"outputs": [
+				{"name":"ton_token_wallet","type":"address"},
+				{"name":"trust","type":"bool"}
+			]
+		},
+		{
+			"name": "getTonTokenWalletInfo",
+			"inputs": [
+				{"name":"root_token_wallet","type":"address"}
+			],
+			"outputs": [
+				{"components":[{"name":"ton_token_wallet","type":"address"},{"name":"need_receive_callback","type":"bool"},{"name":"allow_non_notifiable","type":"bool"},{"name":"need_bounce_callback","type":"bool"},{"name":"trust","type":"bool"}],"name":"ton_token_wallet_info","type":"tuple"}
+			]
+		},
+		{
+			"name": "getTonTokenWallets",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"ton_token_wallet","type":"address"},{"name":"need_receive_callback","type":"bool"},{"name":"allow_non_notifiable","type":"bool"},{"name":"need_bounce_callback","type":"bool"},{"name":"trust","type":"bool"}],"name":"wallets","type":"map(address,tuple)"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+		{
+			"name": "OnSpentEvent",
+			"inputs": [
+				{"name":"spender","type":"address"},
+				{"name":"time_next_payment","type":"uint64"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OnSpentErrorEvent",
+			"inputs": [
+				{"name":"spender","type":"address"},
+				{"name":"err_id","type":"uint8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OnBounceEvent",
+			"inputs": [
+				{"name":"wallet","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	]
+}
