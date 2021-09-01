@@ -49,7 +49,9 @@ Deploys a new terms contract  `<terms_info_filename>` - filename without extensi
 - `string` info - More detailed description
 
 ### Multitoken Wallet (MultitokenWallet.sol)
-This is the main user wallet that will be used to pay for subscriptions.
+This contract is proposed to be used as the main wallet for all tokens available to the 
+user. The contract stores information about all wallets with TIP-3 tokens tied to it, as 
+well as about all subscriptions used by the user. 
 ```
 npm run wallet deploy 
 ```
