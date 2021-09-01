@@ -175,7 +175,8 @@ contract AccessController is SingletokenManager, TimerManager, IService, ISpende
             sendTokensToProvider(0, m_tonTokenWalletBalance, 128);
             return;
         } 
-
+		
+		m_available_until = uint64(now);
         uint128 balance = m_tonTokenWalletBalance;
         if (m_subscription_terms.root_token_wallet.value == 0) {
             balance = address(this).balance - msg.value;

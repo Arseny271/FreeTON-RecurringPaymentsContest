@@ -29,12 +29,19 @@ TonClient.useBinaryLibrary(libNode);
                 break;
             }
 
+            case "new": {
+              await WalletContractManager.callSigned("walletDeployTonTokenWallet", {
+                  root_token_wallet: process.argv[3]
+              });
+              break;
+            }
+
             case "add": {
                 await WalletContractManager.callSigned("walletAddTonTokenWallet", {
-                    root_token_wallet: process.argv[3], 
-                    need_deploy: true, 
-                    need_receive_callback: false, 
-                    allow_non_notifiable: true, 
+                    root_token_wallet: process.argv[3],
+                    need_deploy: true,
+                    need_receive_callback: false,
+                    allow_non_notifiable: true,
                     need_bounce_callback: false
                 });
                 break;
