@@ -28,6 +28,18 @@ npm run terms deploy <terms_info_filename>
 ```
 Deploys a new terms contract  `<terms_info_filename>` - filename without extension in `terms` folder
 
+**Description of subscription terms**
+- `address` debot_address - debot address, currently not used
+- `uint256` verifier_pubkey - public key of the verifier, currently not used. It is assumed that the owner of this key can have access to any intermediary contract and resolve disputes between the user and the supplier.
+- `address` send_value_to - service provider address for sending funds there
+- ` address` root_token_wallet - root TIP-3 token wallet address. Can be 0 if TIP-3 is not used.
+- `uint128` value - payment amount.
+- `uint128` gas_value - The amount of gas attached to the payment when spending funds, as well as when calling a callback. Recommended value 350_000_000 nanotokens.
+- `uint64` period - payment period in seconds
+- `uint32` max_payment_delay - the time that the service can be provided without receiving payment
+- `string` name - Service name.
+- `string` info - More detailed description
+
 #### Multitoken Wallet
 This is the main user wallet that will be used to pay for subscriptions.
 ```
