@@ -21,10 +21,17 @@ npm i
 npm run build
 ```
 
+#### TermsContract 
+This contract contains information about the service and payment data.
+```
+npm run terms deploy <terms_info_filename>
+```
+Deploys a new terms contract  `<terms_info_filename>` - filename without extension in `terms` folder
+
 #### Multitoken Wallet
 This is the main user wallet that will be used to pay for subscriptions.
 ```
-npm run wallet deploy
+npm run wallet deploy 
 ```
 Deploy a new wallet. Before running the command, you should edit the keys/MultitokenWallet.keypair.json file and set the same key pair as in your surf wallet, or delete this file to generate a new key pair.
 Further actions with the wallet are recommended to be carried out in surf using debot at the address `0:3eee93d82002c1e2e44a208fdbc6430241cda93fc43e91b35891e1fd96e029ec`
