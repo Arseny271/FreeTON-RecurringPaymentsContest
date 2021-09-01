@@ -26,7 +26,7 @@ npm run timer-handle <address_to_send_reward>
 ```
 Utility-handler of incoming requests from timer contracts.  `<address_to_send_reward>` - address for work remuneration.
 
-**RootTimerContract (RootOffchainTimer.sol) ** - Ancillary contract. Helps to on-chain deploy timer contracts.
+**RootTimerContract (RootOffchainTimer.sol)** - Ancillary contract. Helps to on-chain deploy timer contracts.
 
 
 ### TermsContract (SubscriptionTermsV2.sol)
