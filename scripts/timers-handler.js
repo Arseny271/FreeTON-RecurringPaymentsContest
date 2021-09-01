@@ -35,7 +35,7 @@ TonClient.useBinaryLibrary(libNode);
                     console.log(`+-------------+------------+--------------------------------------------------------------------+----------+`);
 
                     const wakeupFunction = () => {
-                        TimerContractManager.wakeUp(decoded.value.timer_address, "0:d94edfa7023629a8aaad684fa08484138a887113274ed3fcef93e531131fdade")
+                        TimerContractManager.wakeUp(decoded.value.timer_address, process.argv[2])
                         .then(() => {
                             console.log(`|   Success   | ${decoded.value.wakeup_time} | ${decoded.value.timer_address} | ${decoded.value.reward} |`);
                             console.log(`+-------------+------------+--------------------------------------------------------------------+----------+`);
